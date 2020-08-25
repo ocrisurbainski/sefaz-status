@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
 import java.time.LocalDate;
+import java.util.List;
 import java.util.Optional;
 
 /**
@@ -28,11 +29,25 @@ public class ServicoStatusService {
         return repository.save(servicoStatus);
     }
 
-    @Transactional
     public Optional<ServicoStatus> findByAutorizadorAndServicoAndDataConsulta(
             Autorizador autorizador, Servico servico, LocalDate dataConsulta) {
 
         return repository.findByAutorizadorAndServicoAndDataConsulta(autorizador, servico, dataConsulta);
+    }
+
+    public Optional<List<ServicoStatus>> findByAutorizadorAndDataConsulta(Autorizador autorizador, LocalDate dataConsulta) {
+
+        return repository.findByAutorizadorAndDataConsulta(autorizador, dataConsulta);
+    }
+
+    public Optional<List<ServicoStatus>> findByDataConsulta(LocalDate dataConsulta) {
+
+        return repository.findByDataConsulta(dataConsulta);
+    }
+
+    public Optional<LocalDate> findMaxDataConsulta() {
+
+        return repository.findMaxDataConsulta();
     }
 
 }
