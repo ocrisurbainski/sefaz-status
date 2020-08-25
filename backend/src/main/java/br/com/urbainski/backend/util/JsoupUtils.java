@@ -3,8 +3,6 @@ package br.com.urbainski.backend.util;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
-import java.io.IOException;
-
 /**
  * @author Cristian Urbainski
  * @since 20/08/2020
