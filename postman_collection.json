@@ -1,0 +1,100 @@
+{
+	"info": {
+		"_postman_id": "b014397e-3063-494a-b402-eae1e153e33d",
+		"name": "Viasoft",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Retornar por rest o status atual dos serviços por estado.",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/servico-status",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"servico-status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retornar por rest o status atual do serviço filtrando por estado.",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/servico-status/PR",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"servico-status",
+						"PR"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retornar por rest o status dos serviços por estado filtrando por data.",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/servico-status/RS?data=2020-08-24",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"servico-status",
+						"RS"
+					],
+					"query": [
+						{
+							"key": "data",
+							"value": "2020-08-24"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retornar por rest qual estado teve mais indisponibilidade de serviço.",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/servico-status/top/indisponibilidade",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"servico-status",
+						"top",
+						"indisponibilidade"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
