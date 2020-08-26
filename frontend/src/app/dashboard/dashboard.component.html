@@ -1,0 +1,48 @@
+<div class="p-grid">
+    <div class="p-col-12">
+        <p-card header="Todos os status">
+            
+            <p-table [value]="listStatusAllData">
+                <ng-template pTemplate="header">
+                    <tr>
+                        <th class="fontSize14 textCenter" *ngFor="let col of listStatusAllHead">{{col}}</th>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-row>
+                    <tr>
+                        <td class="fontSize14 textCenter" *ngFor="let col of listStatusAllHead; let i = index">{{row['col' + i] | status}}</td>
+                    </tr>
+                </ng-template>
+            </p-table>
+        </p-card>
+    </div>
+</div>
+
+<div class="p-grid">
+    <div class="p-col-6">
+        <p-card header="Por autorizador">
+            <div class="p-grid">
+                <p-dropdown [options]="dropdownAutorizadora" [(ngModel)]="autorizadoraSelecionada" (onChange)="onChangeAutorizador($event)"></p-dropdown>
+            </div>
+
+            <div class="p-grid">
+                <pre>
+                    <p-table [value]="listaAutorizadoraData">
+                        <ng-template pTemplate="body" let-row>
+                            <tr>
+                                <td >{{row['col0']}}</td>
+                                <td >{{row['col1'] | status}}</td>
+                            </tr>
+                        </ng-template>
+                    </p-table>
+                </pre>
+            </div>
+        </p-card>
+    </div>
+
+    <div class="p-col-6">
+        <p-card header="Autorizador top indisponibilidade">
+            {{ autorizadoraTopDisponibilidade    }}
+        </p-card>
+    </div>
+</div>
