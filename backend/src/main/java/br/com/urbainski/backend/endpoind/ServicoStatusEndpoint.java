@@ -119,7 +119,7 @@ public class ServicoStatusEndpoint {
     }
 
     @GetMapping("/top/indisponibilidade")
-    public ResponseEntity<String> findTopIndisponibilidade() {
+    public ResponseEntity<Map<String, String>> findTopIndisponibilidade() {
 
         LocalDate dataConsulta = LocalDate.now();
 
@@ -144,7 +144,10 @@ public class ServicoStatusEndpoint {
             }
         }
 
-        return ResponseEntity.ok(optional.get().getNome());
+        Map<String, String> values = new HashMap<>();
+        values.put("autorizadora", optional.get().getNome());
+
+        return ResponseEntity.ok(values);
     }
 
     private Map<String, Object> converter(List<ServicoStatus> list, LocalDate dataConsulta) {
