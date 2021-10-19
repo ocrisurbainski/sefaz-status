@@ -1,14 +1,14 @@
 <style>
-  :host {
+:host {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     font-size: 14px;
     color: #333;
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-  }
+}
 
-  .toolbar {
+.toolbar {
     position: absolute;
     top: 0;
     left: 0;
@@ -19,27 +19,27 @@
     background-color: #1976d2;
     color: white;
     font-weight: 600;
-  }
+}
 
-  .toolbar-title {
+.toolbar-title {
     margin-left: 40px;
     font-size: 30px;
-  }
+}
 
-  .content {
+.content {
     display: flex;
     margin: 82px auto 32px;
     padding: 0 16px;
     flex-direction: column;
     align-items: center;
-  }
+}
 </style>
 
 <!-- Toolbar -->
 <div class="toolbar" role="banner">
-  <span class="toolbar-title">Sefaz Status</span>
+    <span class="toolbar-title">Sefaz Status</span>
 </div>
 
 <div class="content" role="main">
-  <router-outlet></router-outlet>
+    <router-outlet></router-outlet>
 </div>
