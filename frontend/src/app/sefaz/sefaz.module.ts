@@ -6,17 +6,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { Routes, RouterModule } from '@angular/router';
 
-import { CardModule } from 'primeng/card';
-import { TableModule } from 'primeng/table';
-import { DropdownModule } from 'primeng/dropdown';
+import { PrimengModule } from '@shared/primeng/primeng.module';
 
 import { DashboardComponent } from '@sefaz/view/dashboard/dashboard.component';
 import { StatusPipe } from '@sefaz/pipe/status.pipe';
 
 const routes: Routes = [
-    { 
-        path: 'dashboard', 
-        component: DashboardComponent 
+    {
+        path: 'dashboard',
+        component: DashboardComponent
     }
 ];
 
@@ -31,9 +29,7 @@ const routes: Routes = [
         HttpClientModule,
         BrowserAnimationsModule,
         ScrollingModule,
-        CardModule,
-        TableModule,
-        DropdownModule,
+        PrimengModule,
         RouterModule.forChild(routes)
     ],
 })

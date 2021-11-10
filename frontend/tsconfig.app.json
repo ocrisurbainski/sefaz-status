@@ -6,7 +6,8 @@
         "types": [],
         "baseUrl": "src",
         "paths": {
-            "@sefaz/*": ["app/sefaz/*"]
+            "@sefaz/*": ["app/sefaz/*"],
+            "@shared/*": ["app/shared/*"],
         }
     },
     "files": [
