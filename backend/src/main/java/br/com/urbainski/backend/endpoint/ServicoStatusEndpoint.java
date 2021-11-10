@@ -1,4 +1,4 @@
-package br.com.urbainski.backend.endpoind;
+package br.com.urbainski.backend.endpoint;
 
 import br.com.urbainski.backend.model.Autorizador;
 import br.com.urbainski.backend.model.ServicoStatus;
