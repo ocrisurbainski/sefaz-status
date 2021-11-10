@@ -7,7 +7,7 @@ import { SelectItem } from 'primeng/api';
     styleUrls: ['./dashboard.component.sass']
 })
 export class DashboardComponent implements OnInit {
-  
+
     listAutorizadora : string[] = [];
     listStatusAllHead : string[] = [];
     listStatusAllData : Object[] = [];
@@ -34,7 +34,7 @@ export class DashboardComponent implements OnInit {
 
         this.service.topIndisponibilidade().subscribe({
             next: (values) => {
-                this.autorizadoraTopDisponibilidade = values['autorizadora'];
+                this.autorizadoraTopDisponibilidade = values && values['autorizadora'];
 
                 if (!this.autorizadoraTopDisponibilidade) {
 
@@ -67,11 +67,11 @@ export class DashboardComponent implements OnInit {
 
             var data = {};
             data['col0'] = autorizadora;
-            
+
             var cod = 1;
 
             for (var k = 1; k < this.listStatusAllHead.length; k++) {
-            
+
                 var servico : string = this.listStatusAllHead[k];
 
                 var value : string = object[servico];
@@ -82,7 +82,7 @@ export class DashboardComponent implements OnInit {
                 }
 
                 data['col' + cod] = value;
-                
+
                 cod++;
             }
 
