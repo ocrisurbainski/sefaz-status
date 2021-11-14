@@ -1,0 +1,21 @@
+<p-card header="Por autorizador">
+    <div class="p-grid">
+        <p-dropdown [options]="dropdownAutorizadora" 
+                    [(ngModel)]="autorizadoraSelecionada" 
+                    (onChange)="onChangeAutorizador()">
+        </p-dropdown>
+    </div>
+
+    <div class="p-grid">
+        <pre>
+            <p-table [value]="listaAutorizadoraData">
+                <ng-template pTemplate="body" let-row>
+                    <tr>
+                        <td >{{row['col0']}}</td>
+                        <td >{{row['col1'] | status}}</td>
+                    </tr>
+                </ng-template>
+            </p-table>
+        </pre>
+    </div>
+</p-card>

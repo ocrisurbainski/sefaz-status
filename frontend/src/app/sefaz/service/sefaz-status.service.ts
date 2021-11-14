@@ -7,16 +7,16 @@ import { Observable } from 'rxjs';
 })
 export class SefazStatusService {
 
-    private urlService: string = 'http://localhost:8080/v1/servico-status';
+    private urlService = 'http://localhost:8080/v1/servico-status';
 
     constructor(private http: HttpClient) { }
 
-    findAll(): Observable<Map<string, Object>> {
-        return this.http.get<Map<string, Object>>(this.urlService);
+    findAll(): Observable<Map<string, object>> {
+        return this.http.get<Map<string, object>>(this.urlService);
     }
 
-    findByAutorizador(autorizador: string): Observable<Map<string, Object>> {
-        return this.http.get<Map<string, Object>>(`${this.urlService}/${autorizador}`);
+    findByAutorizador(autorizador: string): Observable<Map<string, object>> {
+        return this.http.get<Map<string, object>>(`${this.urlService}/${autorizador}`);
     }
 
     topIndisponibilidade(): Observable<string> {

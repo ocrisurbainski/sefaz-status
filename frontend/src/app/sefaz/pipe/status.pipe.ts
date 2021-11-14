@@ -9,7 +9,7 @@ export class StatusPipe implements PipeTransform {
         if (value === 'VERDE') {
             return 'Ok';
         } else if (value === 'AMARELO') {
-            return 'AtenÃ§Ã£o';
+            return 'Atenção';
         } else if (value === 'VERMELHO') {
             return 'Problema';
         }
